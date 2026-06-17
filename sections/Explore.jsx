@@ -1,18 +1,19 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import styles from '../styles';
 import { exploreWorlds } from '../constants';
 import { staggerContainer } from '../utils/motion';
+import { useWorldTheme } from '../context/WorldThemeContext';
 import { ExploreCard, TitleText, TypingText } from '../components';
 
 const Explore = () => {
-  const [active, setActive] = useState('world-2');
+  const { activeWorldId, setActiveWorldId } = useWorldTheme();
+  const active = activeWorldId ?? 'world-2';
 
   return (
-    <section className={`${styles.paddings}`} id="explore">
+    <section className={`${styles.paddings} scroll-mt-[110px]`} id="explore">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -32,10 +33,19 @@ const Explore = () => {
               {...world}
               index={index}
               active={active}
-              handleClick={setActive}
+              handleClick={setActiveWorldId}
             />
           ))}
         </div>
+        {activeWorldId && (
+          <button
+            type="button"
+            onClick={() => setActiveWorldId(null)}
+            className="self-center mt-[28px] font-normal text-[14px] text-secondary-white hover:text-white transition-colors"
+          >
+            ↺ Reset to the AETHER theme
+          </button>
+        )}
       </motion.div>
     </section>
   );

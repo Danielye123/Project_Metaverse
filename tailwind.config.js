@@ -10,8 +10,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-black': '#1A232E',
-        'secondary-white': '#c7c7c7',
+        'primary-black': 'var(--color-base)',
+        'secondary-white': 'var(--color-muted)',
+        surface: 'var(--color-surface)',
+        accent: 'var(--color-accent)',
+        glow: 'var(--color-glow)',
       },
       transitionTimingFunction: {
         'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',

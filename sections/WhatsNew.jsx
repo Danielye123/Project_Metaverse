@@ -20,8 +20,8 @@ const WhatsNew = () => (
         variants={fadeIn('right', 'tween', 0.2, 1)}
         className="flex-[0.95] flex justify-center flex-col"
       >
-        <TypingText title="| Whats new?" />
-        <TitleText title={<>What's new about Metaversus?</>} />
+        <TypingText title="| What's new?" />
+        <TitleText title={<>What's new in AETHER?</>} />
         <div className="mt-[48px] flex flex-wrap justify-between gap-[24px]">
           {newFeatures.map((feature) => (
             <NewFeatures key={feature.title} {...feature} />
@@ -35,7 +35,7 @@ const WhatsNew = () => (
       >
         <img
           src="/whats-new.png"
-          alt="get-started"
+          alt="A glimpse of new AETHER worlds"
           className="w-[90%] h-[90%] object-contain"
         />
       </motion.div>

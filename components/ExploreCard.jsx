@@ -15,7 +15,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
   >
     <img
       src={imgUrl}
-      alt="planet-04"
+      alt={title}
       className="absolute w-full h-full object-cover rounded-[24px]"
     />
     {active !== id ? (
@@ -34,7 +34,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
           />
         </div>
         <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
-          Enter Metaverse
+          Enter AETHER
         </p>
         <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
           {title}

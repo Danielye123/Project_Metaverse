@@ -2,69 +2,80 @@ export const exploreWorlds = [
   {
     id: 'world-1',
     imgUrl: '/planet-01.png',
-    title: 'The Hogwarts',
+    title: 'Lumina Reach',
+    theme: { accent: '#F5A623', glow: '#FFCE73' },
   },
   {
     id: 'world-2',
     imgUrl: '/planet-02.png',
-    title: 'The Upside Down',
+    title: 'The Verdant Expanse',
+    theme: { accent: '#2BB673', glow: '#7CF0B2' },
   },
   {
     id: 'world-3',
     imgUrl: '/planet-03.png',
-    title: 'Kadirojo Permai',
+    title: 'Halcyon Drift',
+    theme: { accent: '#22B8C7', glow: '#7FE9F0' },
   },
   {
     id: 'world-4',
     imgUrl: '/planet-04.png',
-    title: 'Paradise Island',
+    title: 'Obsidian Spire',
+    theme: { accent: '#7C3AED', glow: '#C4A0FF' },
   },
   {
     id: 'world-5',
     imgUrl: '/planet-05.png',
-    title: 'Hawkins Labs',
+    title: 'Aurora Sands',
+    theme: { accent: '#FF4D8D', glow: '#FF9EC4' },
   },
 ];
 
 export const startingFeatures = [
-  'Find a world that suits you and you want to enter',
-  'Enter the world by reading basmalah to be safe',
-  'No need to beat around the bush, just stay on the gas and have fun',
+  'Pick a world that matches the experience you are after',
+  'Pull on your headset and step across the threshold',
+  'Move, build, and meet others — the world responds to you',
 ];
 
 export const newFeatures = [
   {
     imgUrl: '/vrpano.svg',
-    title: 'A new world',
+    title: 'New worlds weekly',
     subtitle:
-        'we have the latest update with new world for you to try never mind',
+        'Fully-realized worlds drop every week, so there is always somewhere new to lose yourself.',
   },
   {
     imgUrl: '/headset.svg',
-    title: 'More realistic',
+    title: 'True presence',
     subtitle:
-        'In the latest update, your eyes are narrow, making the world more realistic than ever',
+        'Spatial audio and full-body tracking make every world feel close enough to reach out and touch.',
   },
 ];
 
 export const insights = [
   {
     imgUrl: '/planet-06.png',
-    title: 'The launch of the Metaverse makes Elon musk ketar-ketir',
+    category: 'Spatial',
+    readTime: '6 min read',
+    title: 'How spatial computing quietly rewired the internet',
     subtitle:
-        'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
+        'The jump from screens to spaces changed how we meet, work, and play online — here is what shifted and why it stuck.',
   },
   {
     imgUrl: '/planet-07.png',
-    title: '7 tips to easily master the madness of the Metaverse',
+    category: 'Guides',
+    readTime: '4 min read',
+    title: 'Seven ways to feel at home in your first virtual world',
     subtitle:
-        'Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum',
+        'New to AETHER? These small habits help the worlds stop feeling like software and start feeling like places.',
   },
   {
     imgUrl: '/planet-08.png',
-    title: 'With one platform you can explore the whole world virtually',
+    category: 'Worlds',
+    readTime: '5 min read',
+    title: 'One platform, a thousand worlds: a tour of what is possible',
     subtitle:
-        'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+        'From quiet retreats to sprawling cities, a look at the range of worlds you can step into without leaving your room.',
   },
 ];
 
@@ -72,17 +83,106 @@ export const socials = [
   {
     name: 'twitter',
     url: '/twitter.svg',
+    link: 'https://twitter.com',
   },
   {
     name: 'linkedin',
     url: '/linkedin.svg',
+    link: 'https://linkedin.com',
   },
   {
     name: 'instagram',
     url: '/instagram.svg',
+    link: 'https://instagram.com',
   },
   {
     name: 'facebook',
     url: '/facebook.svg',
+    link: 'https://facebook.com',
+  },
+];
+
+export const navLinks = [
+  { id: 'explore', title: 'Worlds' },
+  { id: 'pricing', title: 'Pricing' },
+  { id: 'faq', title: 'FAQ' },
+];
+
+export const statistics = [
+  { value: 1200, suffix: '+', label: 'Living worlds' },
+  { value: 480, suffix: 'K', label: 'Active explorers' },
+  { value: 3.1, suffix: 'M', label: 'Hours explored' },
+  { value: 4.9, suffix: '', label: 'Avg. world rating' },
+];
+
+export const pricingPlans = [
+  {
+    id: 'explorer',
+    title: 'Explorer',
+    monthly: 0,
+    annual: 0,
+    blurb: 'Step in and wander the public worlds, free forever.',
+    features: [
+      'Access to all public worlds',
+      'Spatial audio & full-body presence',
+      'Up to 3 saved worlds',
+    ],
+    popular: false,
+  },
+  {
+    id: 'creator',
+    title: 'Creator',
+    monthly: 12,
+    annual: 9,
+    blurb: 'Build, host, and share worlds of your own.',
+    features: [
+      'Everything in Explorer',
+      'Build & publish unlimited worlds',
+      'Invite up to 50 explorers at once',
+      'Priority world rendering',
+    ],
+    popular: true,
+  },
+  {
+    id: 'studio',
+    title: 'Studio',
+    monthly: 39,
+    annual: 31,
+    blurb: 'For teams shipping persistent, large-scale worlds.',
+    features: [
+      'Everything in Creator',
+      'Persistent worlds with 500+ explorers',
+      'Team roles & shared assets',
+      'Analytics & dedicated support',
+    ],
+    popular: false,
+  },
+];
+
+export const faqs = [
+  {
+    question: 'What headset do I need to use AETHER?',
+    answer:
+        'AETHER runs on every major standalone and PC-tethered headset. No headset yet? You can still explore most worlds in a flat 2D mode from your browser.',
+  },
+  {
+    question: 'Do worlds work offline?',
+    answer:
+        'Saved worlds cache locally so you can wander them offline. Live, shared features like seeing other explorers need a connection.',
+  },
+  {
+    question: 'Can I build my own world?',
+    answer:
+        'Yes. On the Creator plan and up you can build, publish, and host your own worlds with no code required, then invite others straight in.',
+  },
+  {
+    question: 'How much does AETHER cost?',
+    answer:
+        'Exploring is free forever. Building and hosting your own worlds starts at $9/month on an annual Creator plan. See the pricing section above for details.',
+  },
+  {
+    question: 'Who can see my data?',
+    answer:
+        'Your worlds and presence are private by default. You choose what to publish, and we never sell your activity to third parties.',
   },
 ];
