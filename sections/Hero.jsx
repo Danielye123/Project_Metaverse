@@ -3,11 +3,18 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 import styles from '../styles';
+import { useWorldTheme } from '../context/WorldThemeContext';
 import { fadeIn, slideIn, staggerContainer, textVariant } from '../utils/motion';
+
+const DEFAULT_TAGLINE = 'Step into worlds that feel real. Pick a world, pull on your headset, and walk in.';
 
 const Hero = () => {
   const { scrollY } = useScroll();
   const coverY = useTransform(scrollY, [0, 600], [0, 90]);
+  const { activeWorld } = useWorldTheme();
+
+  const cover = activeWorld?.imgUrl ?? '/cover.webp';
+  const tagline = activeWorld?.tagline ?? DEFAULT_TAGLINE;
 
   return (
     <section className={`${styles.yPaddings} ${styles.xPaddings}`}>
@@ -33,8 +40,7 @@ const Hero = () => {
             variants={fadeIn('up', 'tween', 0.3, 1)}
             className="mt-[16px] font-normal sm:text-[24px] text-[18px] text-center text-secondary-white max-w-[640px]"
           >
-            Step into worlds that feel real. Pick a world, pull on your headset,
-            and walk in.
+            {tagline}
           </motion.p>
 
           <motion.div
@@ -65,7 +71,7 @@ const Hero = () => {
 
           <motion.img
             style={{ y: coverY }}
-            src="/cover.webp"
+            src={cover}
             alt="hero_cover"
             className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
           />
