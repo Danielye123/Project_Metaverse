@@ -37,3 +37,7 @@ next-env.d.ts
 
 # vscode
 .vscode
+
+# project notes (kept local, not committed)
+TODO.md
+CASE-STUDY.md
