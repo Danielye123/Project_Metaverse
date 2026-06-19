@@ -41,9 +41,10 @@ const Explore = () => {
           <button
             type="button"
             onClick={() => setActiveWorldId(null)}
-            className="self-center mt-[28px] font-normal text-[14px] text-secondary-white hover:text-white transition-colors"
+            className="self-center mt-[28px] inline-flex items-center gap-2.5 font-normal text-[14px] text-secondary-white hover:text-white transition-colors"
           >
-            ↺ Reset to the AETHER theme
+            <span aria-hidden="true">↺</span>
+            <span>Reset to the AETHER theme</span>
           </button>
         )}
       </motion.div>
