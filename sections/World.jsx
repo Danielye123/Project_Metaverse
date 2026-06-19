@@ -53,9 +53,8 @@ const World = () => (
         variants={fadeIn('up', 'tween', 0.3, 1)}
         className="relative mt-[68px] flex w-full h-[550px]"
       >
-        <img src="/map.png" alt="Map of explorers around you" className="w-full h-full object-cover" />
+        <img src="/map.webp" loading="lazy" alt="Map of explorers around you" className="w-full h-full object-cover" />
 
-        {/* Arcs linking each explorer to every other one */}
         <svg
           className="absolute inset-0 w-full h-full pointer-events-none"
           viewBox="0 0 100 100"

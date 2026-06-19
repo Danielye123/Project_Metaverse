@@ -65,7 +65,7 @@ const Hero = () => {
 
           <motion.img
             style={{ y: coverY }}
-            src="/cover.png"
+            src="/cover.webp"
             alt="hero_cover"
             className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
           />
@@ -77,7 +77,7 @@ const Hero = () => {
               <motion.img
                 animate={{ rotate: 360 }}
                 transition={{ duration: 24, repeat: Infinity, ease: 'linear' }}
-                src="/stamp.png"
+                src="/stamp.webp"
                 alt="stamp"
                 className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
               />

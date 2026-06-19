@@ -1,31 +1,31 @@
 export const exploreWorlds = [
   {
     id: 'world-1',
-    imgUrl: '/planet-01.png',
+    imgUrl: '/planet-01.webp',
     title: 'Lumina Reach',
     theme: { accent: '#F5A623', glow: '#FFCE73' },
   },
   {
     id: 'world-2',
-    imgUrl: '/planet-02.png',
+    imgUrl: '/planet-02.webp',
     title: 'The Verdant Expanse',
     theme: { accent: '#2BB673', glow: '#7CF0B2' },
   },
   {
     id: 'world-3',
-    imgUrl: '/planet-03.png',
+    imgUrl: '/planet-03.webp',
     title: 'Halcyon Drift',
     theme: { accent: '#22B8C7', glow: '#7FE9F0' },
   },
   {
     id: 'world-4',
-    imgUrl: '/planet-04.png',
+    imgUrl: '/planet-04.webp',
     title: 'Obsidian Spire',
     theme: { accent: '#7C3AED', glow: '#C4A0FF' },
   },
   {
     id: 'world-5',
-    imgUrl: '/planet-05.png',
+    imgUrl: '/planet-05.webp',
     title: 'Aurora Sands',
     theme: { accent: '#FF4D8D', glow: '#FF9EC4' },
   },
@@ -54,7 +54,7 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: '/planet-06.png',
+    imgUrl: '/planet-06.webp',
     category: 'Spatial',
     readTime: '6 min read',
     title: 'How spatial computing quietly rewired the internet',
@@ -62,7 +62,7 @@ export const insights = [
         'The jump from screens to spaces changed how we meet, work, and play online — here is what shifted and why it stuck.',
   },
   {
-    imgUrl: '/planet-07.png',
+    imgUrl: '/planet-07.webp',
     category: 'Guides',
     readTime: '4 min read',
     title: 'Seven ways to feel at home in your first virtual world',
@@ -70,7 +70,7 @@ export const insights = [
         'New to AETHER? These small habits help the worlds stop feeling like software and start feeling like places.',
   },
   {
-    imgUrl: '/planet-08.png',
+    imgUrl: '/planet-08.webp',
     category: 'Worlds',
     readTime: '5 min read',
     title: 'One platform, a thousand worlds: a tour of what is possible',
