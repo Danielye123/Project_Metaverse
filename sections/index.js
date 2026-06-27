@@ -1,4 +1,5 @@
 import Hero from './Hero';
+import Singularity from './Singularity';
 import About from './About';
 import Explore from './Explore';
 import GetStarted from './GetStarted';
@@ -12,6 +13,7 @@ import Feedback from './Feedback';
 
 export {
   Hero,
+  Singularity,
   About,
   Explore,
   GetStarted,

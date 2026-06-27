@@ -1,16 +1,15 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import styles from '../styles';
+import Magnetic from '../components/Magnetic';
 import { useWorldTheme } from '../context/WorldThemeContext';
 import { fadeIn, slideIn, staggerContainer, textVariant } from '../utils/motion';
 
 const DEFAULT_TAGLINE = 'Step into worlds that feel real. Pick a world, pull on your headset, and walk in.';
 
 const Hero = () => {
-  const { scrollY } = useScroll();
-  const coverY = useTransform(scrollY, [0, 600], [0, 90]);
   const { activeWorld } = useWorldTheme();
 
   const cover = activeWorld?.imgUrl ?? '/cover.webp';
@@ -47,13 +46,15 @@ const Hero = () => {
             variants={fadeIn('up', 'tween', 0.4, 1)}
             className="mt-[28px] flex flex-wrap justify-center gap-4"
           >
-            <a
-              href="#explore"
-              className="flex items-center gap-[12px] py-4 px-6 bg-accent rounded-[32px] font-medium text-[16px] text-white"
-            >
-              <img src="/headset.svg" alt="" className="w-[20px] h-[20px] object-contain" />
-              Enter AETHER
-            </a>
+            <Magnetic className="inline-flex">
+              <a
+                href="#explore"
+                className="flex items-center gap-[12px] py-4 px-6 bg-accent rounded-[32px] font-medium text-[16px] text-white"
+              >
+                <img src="/headset.svg" alt="" className="w-[20px] h-[20px] object-contain" />
+                Enter AETHER
+              </a>
+            </Magnetic>
             <a
               href="#about"
               className="flex items-center py-4 px-6 rounded-[32px] border-[1px] border-white/30 font-medium text-[16px] text-white hover:bg-white/5 transition-colors"
@@ -69,8 +70,7 @@ const Hero = () => {
         >
           <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
 
-          <motion.img
-            style={{ y: coverY }}
+          <img
             src={cover}
             alt="hero_cover"
             className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
