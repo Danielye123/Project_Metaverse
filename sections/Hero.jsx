@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import styles from '../styles';
 import Magnetic from '../components/Magnetic';
+import Tilt from '../components/Tilt';
 import { useWorldTheme } from '../context/WorldThemeContext';
 import { fadeIn, slideIn, staggerContainer, textVariant } from '../utils/motion';
 
@@ -66,29 +67,31 @@ const Hero = () => {
 
         <motion.div
           variants={slideIn('right', 'tween', 0.2, 1)}
-          className="relative w-full md:mt-[60px] mt-[40px]"
+          className="w-full md:mt-[60px] mt-[40px]"
         >
-          <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
+          <Tilt className="relative w-full" max={6}>
+            <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
 
-          <img
-            src={cover}
-            alt="hero_cover"
-            className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
-          />
+            <img
+              src={cover}
+              alt="hero_cover"
+              className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
+            />
 
-          <div className="absolute inset-0 rounded-tl-[140px] bg-gradient-to-t from-[rgba(14,17,22,0.7)] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-0 rounded-tl-[140px] bg-gradient-to-t from-[rgba(14,17,22,0.7)] to-transparent z-10 pointer-events-none" />
 
-          <a href="#explore" aria-label="Scroll to explore worlds">
-            <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-20">
-              <motion.img
-                animate={{ rotate: 360 }}
-                transition={{ duration: 24, repeat: Infinity, ease: 'linear' }}
-                src="/stamp.webp"
-                alt="stamp"
-                className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
-              />
-            </div>
-          </a>
+            <a href="#explore" aria-label="Scroll to explore worlds">
+              <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-20">
+                <motion.img
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 24, repeat: Infinity, ease: 'linear' }}
+                  src="/stamp.webp"
+                  alt="stamp"
+                  className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
+                />
+              </div>
+            </a>
+          </Tilt>
         </motion.div>
       </motion.div>
     </section>
