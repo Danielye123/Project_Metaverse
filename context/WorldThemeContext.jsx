@@ -29,6 +29,7 @@ export const WorldThemeProvider = ({ children }) => {
     const root = document.documentElement;
     root.style.setProperty('--color-accent', theme.accent);
     root.style.setProperty('--color-glow', theme.glow);
+    root.dataset.ambience = world?.ambience ?? 'stars';
   }, [activeWorldId]);
 
   // Persisting setter (used by consumers); restore above uses the raw state

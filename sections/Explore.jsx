@@ -44,7 +44,7 @@ const Explore = () => {
             className="self-center mt-[28px] inline-flex items-center gap-2.5 font-normal text-[14px] text-secondary-white hover:text-white transition-colors"
           >
             <span aria-hidden="true">↺</span>
-            <span>Reset to the AETHER theme</span>
+            <span>Reset to the AETHER default theme</span>
           </button>
         )}
       </motion.div>
