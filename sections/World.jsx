@@ -31,7 +31,7 @@ const arcPath = ({ x: x1, y: y1 }, { x: x2, y: y2 }) => {
 };
 
 const World = () => (
-  <section className={`${styles.paddings} relative z-10`}>
+  <section id="world" className={`${styles.paddings} relative z-10 scroll-mt-[110px]`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"

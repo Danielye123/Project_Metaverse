@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import Starfield from '../components/Starfield';
 import { WorldThemeProvider } from '../context/WorldThemeContext';
 
 const RootLayout = ({ children }) => (
@@ -8,6 +9,7 @@ const RootLayout = ({ children }) => (
       <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css" />
     </head>
     <body>
+      <Starfield />
       <WorldThemeProvider>{children}</WorldThemeProvider>
     </body>
   </html>

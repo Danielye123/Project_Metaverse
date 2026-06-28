@@ -16,7 +16,7 @@ const Hero = () => {
   const tagline = activeWorld?.tagline ?? DEFAULT_TAGLINE;
 
   return (
-    <section className={`${styles.yPaddings} ${styles.xPaddings}`}>
+    <section id="hero" className={`${styles.yPaddings} ${styles.xPaddings}`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"

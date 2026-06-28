@@ -1,13 +1,13 @@
 import { Footer, Navbar } from '../components';
 import ParallaxBlob from '../components/ParallaxBlob';
-import ScrollProgress from '../components/ScrollProgress';
+import SectionNav from '../components/SectionNav';
 import {
   About, Explore, Faq, Feedback, GetStarted, Hero, Insights, Pricing, Stats, WhatsNew, World,
 } from '../sections';
 
 const Page = () => (
-  <div className="bg-primary-black overflow-x-clip">
-    <ScrollProgress />
+  <div className="relative z-10 overflow-x-clip">
+    <SectionNav />
     <Navbar />
     <Hero />
     {/* <Singularity /> temporarily disabled — re-add `Singularity` to the sections import above to restore */}
